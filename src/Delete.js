@@ -4,12 +4,12 @@ const Delete = ({handleClick}) =>{
     return(
         <>
         <button id="delete" 
-        style={{width:"60px",border:"none",backgroundColor:"blue",padding:"5px",marginTop:"7px",color:"white"}}
+        style={{width:"150px",border:"none",backgroundColor:"blue",padding:"5px",marginTop:"7px",color:"white"}}
         onClick={handleClick}
         
         >
             
-            Empty</button>
+            Remove Completed</button>
         </>
     )
 }

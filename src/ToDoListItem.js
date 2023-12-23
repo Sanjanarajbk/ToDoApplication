@@ -1,18 +1,29 @@
 import React from "react";
 
-const ToDoListItem = () =>{
-    const listItems =["Read SpringBoot", "Complete assignments", "Prepare breakfast", 
-    "Sleep for 2 hours", "Take a shower"]
+const ToDoListItem = ({listItems}) =>{
+
 
     return(
-        <>
-        {
-            listItems.map((element,index) => {
-             return   <p key={index}>
-                    {element}
-                </p>
+        <>  
+        <div className="items" style={{border:"2px solid black",marginLeft:"100px",marginRight:"100px",height:"300px"}}>
+            {listItems.length === 0 ? (
+                 <p style={{fontStyle:"italic",marginTop:"100px"}}>Nothing to do buddy. Sleep!</p>
+            )
+            :
+           
+            (
+               
+                listItems.map((element,index) => {
+                    return   <p key={index} >
+                            {element}
+                            </p>
+                         
             })
-        }
+            )
+          
+            }
+
+        </div>
 </>
     )
 }
